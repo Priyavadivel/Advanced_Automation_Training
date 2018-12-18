@@ -16,31 +16,31 @@ public class Form101 {
 	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id15:first']")
 	public WebElement firstName; 
 	
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id14:j_id23:social")
+	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id20:social']")
 	public WebElement socialSecurityNumber; 
 	
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id14:j_id26:birth")
+	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id23:birth']")
 	public WebElement dob; 
 	
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id14:j_id29:home")
+	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id26:home']")
 	public WebElement homeAddress; 
 	
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id14:j_id32:CITY")
+	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id29:CITY']")
 	public WebElement homeCity; 	
 	
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id14:j_id35:STATE")
+	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id32:STATE']")
 	public WebElement homeState; 	
 	
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id14:j_id38:ZIPCODE")
+	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id35:ZIPCODE']")
 	public WebElement homeZip; 	
 	
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id14:j_id41:TELEPHONE")
+	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id38:TELEPHONE']")
 	public WebElement homePhone; 	
 	
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id14:j_id44:SEX")
+	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id41:SEX']//option[3]")
 	public WebElement sex; 	
 	
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id14:j_id46:MARITALSTATUS")
+	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id43:MARITALSTATUS']//Option[2]")
 	public WebElement maritalStatus; 	
 	
 	//Employer
