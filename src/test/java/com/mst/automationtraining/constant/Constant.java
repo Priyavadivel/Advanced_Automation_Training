@@ -15,9 +15,9 @@ public class Constant {
         public static final String datafilePath = "Excels/Form101.xlsx";
         public static final String REPORTPATH = "Report\\report.html";
         public static final String SCREENSHOTPATH = "Screenshot\\";
-        public static final String MAILFROM = "kdivyasri.k@gmail.com";
-        public static final String MAILTO = "christmastask25@gmail.com";
-        public static final String MAILPWD = "divyarahavan15";
+        public static final String MAILFROM = "priyashinivadivel@gmail.com";
+        public static final String MAILTO = "kdivyasri.k@gmail.com";
+        public static final String MAILPWD = "priyadharshini1994@1";
         public static final String MAILSMTP = "smtp.gmail.com";
  
 		
