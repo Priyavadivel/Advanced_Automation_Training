@@ -32,6 +32,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class TestExecution extends BaseTest {
 
+	
 	ExtentTest parentTest,childTest;
 	private static ExtentReports reporter = ExtentReportFactory.getReporter();
 
@@ -46,6 +47,7 @@ public class TestExecution extends BaseTest {
 		parentReport(browser, methodName);		
 		driver.get(Constant.Form_URL);
 		Form101 webform101  = PageFactory.initElements(driver,Form101.class);
+		
 		childReport("Last Name Entered");
 		webform101.lastName.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"LastName"));
 		childReport("First Name Entered");
@@ -64,7 +66,12 @@ public class TestExecution extends BaseTest {
 		webform101.homePhone.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"HomePhone"));
 		childReport("DOB Entered");
 		webform101.dob.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"DOB"));
-
+		childReport("SEX Entered");
+		webform101.sex.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"sex"));
+		childReport("Marital Status Entered");
+		webform101.maritalStatus.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"maritalStatus"));
+				
+		
 		childReport("Employer Name Entered");
 		webform101.EmployerName.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"EmployerName"));
 		childReport("Fien Number Entered");
@@ -102,10 +109,38 @@ public class TestExecution extends BaseTest {
 		webform101.EmployeeHospitalized.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"EmployeeHospitalized"));
 		childReport("Validity of Claim Entered");
 		webform101.ValidityofClaim_dropdown.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"ValidityofClaim_dropdown"));
+		childReport("Part of Body Injury Table");
+		webform101.clickOnLookup2(ExcelUtility.readExcel(methodName,TC_Name,"PartofBodyInjury"));
+		
+	
+		childReport("What Happened?");
+		webform101.WhatHappened.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"WhatHappened"));
+		childReport("What Object?");
+		webform101.WhatObject.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"WhatObject"));
+		childReport("Nature of Injury");
+		webform101.clickOnLookup(ExcelUtility.readExcel(methodName,TC_Name,"NatureofInjury"));
+		
+		childReport("CauseofInjury");
+		webform101.clickOnLookup1(ExcelUtility.readExcel(methodName,TC_Name,"CauseofInjury"));
+				
+		childReport("What Emp Doing?");
+		webform101.Doing.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"Doing"));
+		childReport("Date of Last Hire");
+		webform101.DOLastHire.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"DOLastHire"));
+		childReport("Was Worker?");
+		webform101.Wasworkedemp.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"Wasworkedemp"));
+		
+		childReport("Actual Gross Earnings");
+		webform101.GrossEarnings.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"GrossEarnings"));
+		
+		childReport("Submitter Email");
+		webform101.SubmitterEmail.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"SubmitterEmail"));
+		
+		webform101.Agree.click();
+		webform101.Submit.click();
+		
 	}
 	
-
-
 	private void parentReport(String browser, String methodName) {
 		parentTest = reporter.startTest(methodName+browser);
 		parentTest.assignCategory(browser);
@@ -126,7 +161,7 @@ public class TestExecution extends BaseTest {
 		}
 		
 		reporter.endTest(parentTest);
-		this.driver.close();
+		//this.driver.close();
 
 	}
 
@@ -138,5 +173,7 @@ public class TestExecution extends BaseTest {
 		Mail_report.send_report();
 	}
 
+
+	
 
 }
