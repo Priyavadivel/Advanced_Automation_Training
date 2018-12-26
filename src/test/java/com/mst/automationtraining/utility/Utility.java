@@ -15,6 +15,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.ITestResult;
 
 import com.mst.automationtraining.constant.Constant;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -44,6 +45,9 @@ public class Utility {
 		}		
 	}
 	
+	public interface IRetryAnalyzer {
+		 public boolean retry(ITestResult result);
+		}
 	
 }
 

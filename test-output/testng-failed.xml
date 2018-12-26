@@ -8,7 +8,7 @@
         <methods>
           <include name="getBrowser"/>
           <include name="tearDown"/>
-          <include name="form101Submission" invocation-numbers="0"/>
+          <include name="form101Submission"/>
           <include name="afterSuite"/>
         </methods>
       </class> <!-- com.mst.automationtraining.executionpage.TestExecution -->

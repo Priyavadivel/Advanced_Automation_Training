@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="70203" started-at="2018-12-21T14:29:32Z" finished-at="2018-12-21T14:30:43Z">
+  <suite name="Suite" duration-ms="69593" started-at="2018-12-26T11:00:43Z" finished-at="2018-12-26T11:01:53Z">
     <groups>
     </groups>
-    <test name="Form101_Submission" duration-ms="70203" started-at="2018-12-21T14:29:32Z" finished-at="2018-12-21T14:30:43Z">
+    <test name="Form101_Submission" duration-ms="69593" started-at="2018-12-26T11:00:43Z" finished-at="2018-12-26T11:01:53Z">
       <class name="com.mst.automationtraining.executionpage.TestExecution">
-        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@1dd92fe2]" name="getBrowser" is-config="true" duration-ms="7634" started-at="2018-12-21T19:59:33Z" finished-at="2018-12-21T19:59:40Z">
+        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314]" name="getBrowser" is-config="true" duration-ms="13445" started-at="2018-12-26T16:30:43Z" finished-at="2018-12-26T16:30:57Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBrowser -->
-        <test-method status="PASS" signature="form101Submission(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@1dd92fe2]" name="form101Submission" duration-ms="62469" started-at="2018-12-21T19:59:40Z" finished-at="2018-12-21T20:00:43Z">
+        <test-method status="PASS" signature="form101Submission(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314]" name="form101Submission" duration-ms="56031" started-at="2018-12-26T16:30:57Z" finished-at="2018-12-26T16:31:53Z">
           <params>
             <param index="0">
               <value>
@@ -34,11 +34,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- form101Submission -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, java.lang.String)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@1dd92fe2]" name="tearDown" is-config="true" duration-ms="9" started-at="2018-12-21T20:00:43Z" finished-at="2018-12-21T20:00:43Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, java.lang.String)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314]" name="tearDown" is-config="true" duration-ms="10" started-at="2018-12-26T16:31:53Z" finished-at="2018-12-26T16:31:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=form101Submission status=SUCCESS method=TestExecution.form101Submission(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@1dd92fe2] output={null}]]]>
+                <![CDATA[[TestResult name=form101Submission status=SUCCESS method=TestExecution.form101Submission(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -50,18 +50,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@1dd92fe2]" name="afterSuite" is-config="true" duration-ms="2458" started-at="2018-12-21T20:00:43Z" finished-at="2018-12-21T20:00:45Z">
-          <exception class="java.lang.NoClassDefFoundError">
+        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314]" name="afterSuite" is-config="true" duration-ms="7330" started-at="2018-12-26T16:31:53Z" finished-at="2018-12-26T16:32:00Z">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[com/sun/mail/util/MailLogger]]>
+              <![CDATA[javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials r187sm93010901pfc.63 - gsmtp
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoClassDefFoundError: com/sun/mail/util/MailLogger
-	at javax.mail.Session.initLogger(Session.java:283)
-	at javax.mail.Session.<init>(Session.java:268)
-	at javax.mail.Session.getInstance(Session.java:304)
-	at com.mst.automationtraining.mail.Mail_report.send_report(Mail_report.java:37)
-	at com.mst.automationtraining.executionpage.TestExecution.afterSuite(TestExecution.java:173)
+              <![CDATA[java.lang.RuntimeException: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials r187sm93010901pfc.63 - gsmtp
+
+	at com.mst.automationtraining.mail.Mail_report.send_report(Mail_report.java:75)
+	at com.mst.automationtraining.executionpage.TestExecution.afterSuite(TestExecution.java:180)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -81,15 +82,22 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.ClassNotFoundException: com.sun.mail.util.MailLogger
-	at java.net.URLClassLoader.findClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	... 24 more
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials r187sm93010901pfc.63 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:843)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:765)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:687)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at javax.mail.Transport.send0(Transport.java:254)
+	at javax.mail.Transport.send(Transport.java:124)
+	at com.mst.automationtraining.mail.Mail_report.send_report(Mail_report.java:70)
+	... 20 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoClassDefFoundError -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

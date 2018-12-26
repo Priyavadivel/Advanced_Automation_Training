@@ -1,6 +1,7 @@
 package com.mst.automationtraining.pageobject;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,8 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.DataProvider;
 
+import com.mst.automationtraining.customexception.Customexception;
 import com.mst.automationtraining.driver.driverclass;
+import com.mst.automationtraining.excelutility.ExcelUtility;
 
 public class Form101 extends driverclass {
 
@@ -279,6 +283,7 @@ public class Form101 extends driverclass {
 		driver.switchTo().window(Parent_Window);
 	}
 	
+	
 	//EMPLOYEE'S WAGE DATA Section
 	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id178:j_id197:datehire']")
 	public WebElement GrossEarnings;
@@ -294,7 +299,33 @@ public class Form101 extends driverclass {
 	//Submit Button
 	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9']/div[1]/div[15]/input")
 	public WebElement Submit;
+	
+	 public void Verify() throws Exception{
+		 try{
+	   
+		 WebElement element = driver.findElement(By.xpath(".//*[@id='j_id0:j_id2:j_id3']/div/table/tbody/tr/td/p"));
+		 String expected = "Thank you for your submission!";
+		 String actual = element.getText();
+                  if(actual.equals(expected)){
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            System.out.println("Actual Value:" +actual);
+            System.out.println("Expected Value:" +expected);
+           
+         }
+         else{
+        	 throw new Customexception("The value "+actual+"is not matched with the given value "+expected);
+        	 
+        	 
+         }
+        	 
+         }
+        catch(Exception E){
+        	throw E;
+        }
+	 }
 
+
+	
 
 	public Form101(WebDriver driver) {
 		super(driver);

@@ -8,6 +8,7 @@ package com.mst.automationtraining.executionpage;
  *
  */
 import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -16,6 +17,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.mst.automationtraining.basetest.BaseTest;
@@ -26,6 +28,7 @@ import com.mst.automationtraining.extentreport.ExtentReportFactory;
 import com.mst.automationtraining.mail.Mail_report;
 import com.mst.automationtraining.pageobject.Form101;
 import com.mst.automationtraining.utility.Utility;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -38,7 +41,8 @@ public class TestExecution extends BaseTest {
 
 	@Test
 	@Parameters({"browser"})
-
+	
+	
 	public  void form101Submission(String browser,Method method)throws Exception{
 
 		//System.out.println("test11");
@@ -74,6 +78,8 @@ public class TestExecution extends BaseTest {
 		
 		childReport("Employer Name Entered");
 		webform101.EmployerName.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"EmployerName"));
+		
+		
 		childReport("Fien Number Entered");
 		webform101.FienNumber.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"FienNumber"));
 		childReport("OfficeAddress Entered");
@@ -139,6 +145,8 @@ public class TestExecution extends BaseTest {
 		webform101.Agree.click();
 		webform101.Submit.click();
 		
+		webform101.Verify();
+			
 	}
 	
 	private void parentReport(String browser, String methodName) {
@@ -164,8 +172,7 @@ public class TestExecution extends BaseTest {
 		//this.driver.close();
 
 	}
-
-
+	
 	@AfterSuite
 	public void afterSuite(){
 		reporter.flush();
