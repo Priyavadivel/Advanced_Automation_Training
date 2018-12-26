@@ -9,7 +9,6 @@ package com.mst.automationtraining.executionpage;
  */
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
