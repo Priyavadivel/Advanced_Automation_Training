@@ -22,6 +22,9 @@ public class Form101 extends driverclass {
 	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id12:last']")
 	public WebElement lastName;
 
+	/*@FindBy(xpath= ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id12:last']")
+	public WebElement lastNames;*/
+	
 	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id15:first']")
 	public WebElement firstName;
 

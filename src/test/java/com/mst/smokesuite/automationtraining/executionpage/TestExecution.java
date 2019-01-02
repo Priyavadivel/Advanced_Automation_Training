@@ -1,0 +1,149 @@
+package com.mst.smokesuite.automationtraining.executionpage;
+/**
+ * 
+ * @author Priya V
+ * Created Date: Dec 5,2018
+ * Last modified By: Priya V
+ * Purpose of the class: TestExecution contains the id and xpath of the Form101 fields.
+ *
+ */
+import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import com.mst.automationtraining.basetest.BaseTest;
+import com.mst.automationtraining.constant.Constant;
+import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.excelutility.ExcelUtility;
+import com.mst.automationtraining.extentreport.ExtentReportFactory;
+import com.mst.automationtraining.extentreport.ReportGenerator;
+import com.mst.automationtraining.mail.Mail_report;
+import com.mst.automationtraining.pageobject.Form101;
+import com.mst.automationtraining.utility.Utility;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+public class TestExecution extends BaseTest {
+
+	@Test
+	@Parameters({"browser"})	
+	
+	public  void form101Submission(String browser,Method method,ReportGenerator report)throws Exception{
+
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		String methodName = method.getName(), TC_Name = "TC001";
+		report.parentReport(browser, methodName);		
+		driver.get(Constant.Form_URL);
+		Form101 webform101  = PageFactory.initElements(driver,Form101.class);
+		
+		report.childReport("Last Name Entered");
+		webform101.lastName.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"LastName"));
+		logger.info("Last Name Entered Successfully");
+		/*childReport("First Name Entered");
+		webform101.firstName.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"FirstName"));
+		childReport("Social Security Number Entered");
+		webform101.socialSecurityNumber.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"SSN"));
+		childReport("Home Address Entered");
+		webform101.homeAddress.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"HomeAddress"));
+		childReport("Home City Entered");
+		webform101.homeCity.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"HomeCity"));
+		childReport("Home State Entered");
+		webform101.homeState.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"HomeState"));
+		childReport("Home Zip Code Entered");
+		webform101.homeZip.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"HomeZip"));
+		childReport("Phone Number Entered");
+		webform101.homePhone.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"HomePhone"));
+		childReport("DOB Entered");
+		webform101.dob.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"DOB"));
+		childReport("SEX Entered");
+		webform101.sex.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"sex"));
+		childReport("Marital Status Entered");
+		webform101.maritalStatus.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"maritalStatus"));
+				
+		
+		childReport("Employer Name Entered");
+		webform101.EmployerName.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"EmployerName"));
+		
+		
+		childReport("Fien Number Entered");
+		webform101.FienNumber.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"FienNumber"));
+		childReport("OfficeAddress Entered");
+		webform101.OfficeAddress.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"OfficeAddress"));
+		childReport("Office City Entered");
+		webform101.OfficeCity.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"OfficeCity"));
+		childReport("Office State Entered");
+		webform101.OfficeState.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"OfficeState"));
+		childReport("Office Zip Entered");
+		webform101.OfficeZip.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"OfficeZip"));
+		childReport("OfficePhone Entered");
+		webform101.OfficePhone.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"OfficePhone"));
+		
+		childReport("DateofInjuiry Entered");
+		webform101.DateofInjuiry.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"DateofInjuiry"));
+		childReport("DateEmployerNotified Entered");
+		webform101.DateEmployerNotified.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"DateEmployerNotified"));
+		childReport("LastDayofWork Entered");
+		webform101.LastDayofWork.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"LastDayofWork"));
+		childReport("EmployerOccupation Entered");
+		webform101.EmployerOccupation.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"EmployerOccupation"));
+		childReport("Injury occur on Employer premises Entered");
+		webform101.Employerpremises.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"Employerpremises"));
+		childReport("InjuryorIlleness Entered");
+		webform101.InjuryorIlleness.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"InjuryorIlleness"));
+		childReport("Part of Body Injured Entered");
+		webform101.PartofBodyInjured.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"PartofBodyInjured"));
+		childReport("Fatal Entered");
+		webform101.Fatal.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"Fatal"));
+		childReport("Employee Treated Entered");
+		webform101.EmployeeTreated.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"EmployeeTreated"));
+		childReport("Employee Hospitalized Entered");
+		webform101.EmployeeHospitalized.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"EmployeeHospitalized"));
+		childReport("Validity of Claim Entered");
+		webform101.ValidityofClaim_dropdown.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"ValidityofClaim_dropdown"));
+		childReport("Part of Body Injury Table");
+		webform101.clickOnLookup2(ExcelUtility.readExcel(methodName,TC_Name,"PartofBodyInjury"));
+		
+	
+		childReport("What Happened?");
+		webform101.WhatHappened.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"WhatHappened"));
+		childReport("What Object?");
+		webform101.WhatObject.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"WhatObject"));
+		childReport("Nature of Injury");
+		webform101.clickOnLookup(ExcelUtility.readExcel(methodName,TC_Name,"NatureofInjury"));
+		
+		childReport("CauseofInjury");
+		webform101.clickOnLookup1(ExcelUtility.readExcel(methodName,TC_Name,"CauseofInjury"));
+				
+		childReport("What Emp Doing?");
+		webform101.Doing.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"Doing"));
+		childReport("Date of Last Hire");
+		webform101.DOLastHire.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"DOLastHire"));
+		childReport("Was Worker?");
+		webform101.Wasworkedemp.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"Wasworkedemp"));
+		
+		childReport("Actual Gross Earnings");
+		webform101.GrossEarnings.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"GrossEarnings"));
+		
+		childReport("Submitter Email");
+		webform101.SubmitterEmail.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"SubmitterEmail"));
+		
+		webform101.Agree.click();
+		webform101.Submit.click();
+		
+		webform101.Verify();*/
+			
+	}
+	
+
+}

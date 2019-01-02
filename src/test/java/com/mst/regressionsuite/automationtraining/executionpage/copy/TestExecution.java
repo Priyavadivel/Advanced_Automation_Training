@@ -1,4 +1,4 @@
-package com.mst.automationtraining.executionpage;
+package com.mst.regressionsuite.automationtraining.executionpage.copy;
 /**
  * 
  * @author Priya V
@@ -34,10 +34,6 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class TestExecution extends BaseTest {
 
-	
-	ExtentTest parentTest,childTest;
-	private static ExtentReports reporter = ExtentReportFactory.getReporter();
-
 	@Test
 	@Parameters({"browser"})
 	
@@ -46,7 +42,7 @@ public class TestExecution extends BaseTest {
 
 		//System.out.println("test11");
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		String methodName = method.getName(), TC_Name = "TC001";
+		/*String methodName = method.getName(), TC_Name = "TC001";
 		parentReport(browser, methodName);		
 		driver.get(Constant.Form_URL);
 		Form101 webform101  = PageFactory.initElements(driver,Form101.class);
@@ -144,42 +140,10 @@ public class TestExecution extends BaseTest {
 		webform101.Agree.click();
 		webform101.Submit.click();
 		
-		webform101.Verify();
+		webform101.Verify();*/
 			
 	}
 	
-	private void parentReport(String browser, String methodName) {
-		parentTest = reporter.startTest(methodName+browser);
-		parentTest.assignCategory(browser);
-	}
-	private void childReport(String methodName) {
-		childTest = reporter.startTest(methodName);
-		childTest.log(LogStatus.PASS, methodName);
-		parentTest.appendChild(childTest);
-	}
 
-	@AfterMethod
-	@Parameters({"browser"})
-	public void tearDown(ITestResult result,String browser) throws Exception{
-		String methodName=result.getMethod().getMethodName();
-		if(result.getStatus()==ITestResult.FAILURE){
-			String res=result.getThrowable().getMessage();
-			Utility.screenshot(driver, methodName+browser,childTest,res);
-		}
-		
-		reporter.endTest(parentTest);
-		//this.driver.close();
-
-	}
-	
-	@AfterSuite
-	public void afterSuite(){
-		reporter.flush();
-		reporter.close();
-		Mail_report.send_report();
-	}
-
-
-	
 
 }

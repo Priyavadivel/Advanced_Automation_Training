@@ -16,6 +16,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import com.mst.automationtraining.constant.Constant;
+import com.mst.automationtraining.customexception.Customexception;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -48,4 +49,38 @@ public class ReportGenerator {
 		reporter.endTest(parentTest);
 	}
 
+	public void logScreenshot(WebDriver screenDriver, String testCaseName,String res) throws IOException{
+		try{
+			File file  = ((TakesScreenshot)screenDriver).getScreenshotAs(OutputType.FILE);
+			File dir = new File(Constant.SCREENSHOTPATH+testCaseName);
+			dir.mkdirs();
+			
+			String workspace = 	((new File(".").getAbsolutePath()).replace("\\", "/")).replace(".", "");
+			String fileName= workspace+Constant.SCREENSHOTPATH+testCaseName+"/"+testCaseName+".jpg";
+			System.out.println(fileName);
+			FileUtils.copyFile(file, new File(fileName));
+			ExtentTest logger = this.childTest;
+			String img = logger.addScreenCapture(fileName);
+		    logger.log(LogStatus.FAIL, "Image", res+img);
+			
+		}
+		catch (Customexception ce) {
+			ce.printStackTrace();
+			throw new Customexception("Custom Exception while taking Screenshot: "+ce);
+		}
+		catch(Exception ex){
+			throw new Customexception("Exception while taking screen  shot: "+ex);
+		}		
+	}	
+	public void logSkipTest(WebDriver screenDriver, String testCaseName, String res) throws IOException {
+		File file  = ((TakesScreenshot)screenDriver).getScreenshotAs(OutputType.FILE);
+		File dir = new File(Constant.SCREENSHOTPATH+testCaseName);
+		dir.mkdirs();
+		String workspace = 	((new File(".").getAbsolutePath()).replace("\\", "/")).replace(".", "");
+		String fileName= workspace+Constant.SCREENSHOTPATH+testCaseName+"/"+testCaseName+".jpg";
+		FileUtils.copyFile(file, new File(fileName));
+		ExtentTest logger = this.childTest;
+		String img = logger.addScreenCapture(fileName);
+	    logger.log(LogStatus.SKIP, "Image", res+img);
+	} 
 }

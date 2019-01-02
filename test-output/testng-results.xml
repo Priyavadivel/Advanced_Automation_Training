@@ -1,68 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="69593" started-at="2018-12-26T11:00:43Z" finished-at="2018-12-26T11:01:53Z">
+  <suite name="Suite" duration-ms="133" started-at="2019-01-02T08:03:29Z" finished-at="2019-01-02T08:03:30Z">
     <groups>
     </groups>
-    <test name="Form101_Submission" duration-ms="69593" started-at="2018-12-26T11:00:43Z" finished-at="2018-12-26T11:01:53Z">
-      <class name="com.mst.automationtraining.executionpage.TestExecution">
-        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314]" name="getBrowser" is-config="true" duration-ms="13445" started-at="2018-12-26T16:30:43Z" finished-at="2018-12-26T16:30:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getBrowser -->
-        <test-method status="PASS" signature="form101Submission(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314]" name="form101Submission" duration-ms="56031" started-at="2018-12-26T16:30:57Z" finished-at="2018-12-26T16:31:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void com.mst.automationtraining.executionpage.TestExecution.form101Submission(java.lang.String,java.lang.reflect.Method) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
+    <test name="Form101_Submission" duration-ms="133" started-at="2019-01-02T08:03:29Z" finished-at="2019-01-02T08:03:30Z">
+      <class name="com.mst.smokesuite.automationtraining.executionpage.TestExecution">
+        <test-method status="FAIL" signature="form101Submission(java.lang.String, java.lang.reflect.Method, com.mst.automationtraining.extentreport.ReportGenerator)[pri:0, instance:com.mst.smokesuite.automationtraining.executionpage.TestExecution@13805618]" name="form101Submission" duration-ms="0" started-at="2019-01-02T13:33:29Z" finished-at="2019-01-02T13:33:29Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method form101Submission requires 3 parameters but 1 were supplied in the @Test annotation.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Method form101Submission requires 3 parameters but 1 were supplied in the @Test annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:251)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:172)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:443)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:569)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1308)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1036)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1126)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- form101Submission -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, java.lang.String)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314]" name="tearDown" is-config="true" duration-ms="10" started-at="2018-12-26T16:31:53Z" finished-at="2018-12-26T16:31:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=form101Submission status=SUCCESS method=TestExecution.form101Submission(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.mst.automationtraining.executionpage.TestExecution@4f9a3314]" name="afterSuite" is-config="true" duration-ms="7330" started-at="2018-12-26T16:31:53Z" finished-at="2018-12-26T16:32:00Z">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
-535 5.7.8  https://support.google.com/mail/?p=BadCredentials r187sm93010901pfc.63 - gsmtp
-]]>
-            </message>
+        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.mst.smokesuite.automationtraining.executionpage.TestExecution@13805618]" name="afterSuite" is-config="true" duration-ms="30" started-at="2019-01-02T13:33:30Z" finished-at="2019-01-02T13:33:30Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
-535 5.7.8  https://support.google.com/mail/?p=BadCredentials r187sm93010901pfc.63 - gsmtp
-
-	at com.mst.automationtraining.mail.Mail_report.send_report(Mail_report.java:75)
-	at com.mst.automationtraining.executionpage.TestExecution.afterSuite(TestExecution.java:180)
+              <![CDATA[java.lang.NullPointerException
+	at com.mst.automationtraining.basetest.BaseTest.afterSuite(BaseTest.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -82,26 +70,13 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
-535 5.7.8  https://support.google.com/mail/?p=BadCredentials r187sm93010901pfc.63 - gsmtp
-
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:843)
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:765)
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:687)
-	at javax.mail.Service.connect(Service.java:388)
-	at javax.mail.Service.connect(Service.java:246)
-	at javax.mail.Service.connect(Service.java:195)
-	at javax.mail.Transport.send0(Transport.java:254)
-	at javax.mail.Transport.send(Transport.java:124)
-	at com.mst.automationtraining.mail.Mail_report.send_report(Mail_report.java:70)
-	... 20 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.mst.automationtraining.executionpage.TestExecution -->
+      </class> <!-- com.mst.smokesuite.automationtraining.executionpage.TestExecution -->
     </test> <!-- Form101_Submission -->
   </suite> <!-- Suite -->
 </testng-results>
