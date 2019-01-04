@@ -21,11 +21,6 @@
 			<class
 				name="com.mst.smokesuite.automationtraining.executionpage.Linkexecution" />
 		</classes>
-	<!-- </test> 
-		 <test name="Test Batch">
-		<classes>
-			<class
-				name="test.Tester" />
-		</classes> -->
+	
 	</test>
 </suite> 
