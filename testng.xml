@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+	<test name="Form101_Submission">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class
+				name="com.mst.smokesuite.automationtraining.executionpage.TestExecution"/>
+		</classes>
+	</test>
+	<test name="ErrorMessageValidation">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class
+				name="com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation" />
+		</classes>
+	</test>
+	<test name="LinksValidation">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class
+				name="com.mst.smokesuite.automationtraining.executionpage.Linkexecution" />
+		</classes>
+	<!-- </test> 
+		 <test name="Test Batch">
+		<classes>
+			<class
+				name="test.Tester" />
+		</classes> -->
+	</test>
+</suite> 

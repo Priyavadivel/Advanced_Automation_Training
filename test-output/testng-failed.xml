@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Form101_Submission(failed)">
-    <parameter name="browser" value="Chrome"/>
+  <test name="ErrorMessageValidation(failed)">
+    <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="com.mst.automationtraining.executionpage.TestExecution">
+      <class name="com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation">
         <methods>
+          <include name="beforeSuite"/>
           <include name="getBrowser"/>
           <include name="tearDown"/>
-          <include name="form101Submission"/>
           <include name="afterSuite"/>
+          <include name="formerrorvalidation"/>
         </methods>
-      </class> <!-- com.mst.automationtraining.executionpage.TestExecution -->
+      </class> <!-- com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation -->
     </classes>
-  </test> <!-- Form101_Submission(failed) -->
+  </test> <!-- ErrorMessageValidation(failed) -->
+  <test name="LinksValidation(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.mst.smokesuite.automationtraining.executionpage.Linkexecution">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="getBrowser"/>
+          <include name="tearDown"/>
+          <include name="afterSuite"/>
+          <include name="formlinkvalidation" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mst.smokesuite.automationtraining.executionpage.Linkexecution -->
+    </classes>
+  </test> <!-- LinksValidation(failed) -->
 </suite> <!-- Failed suite [Suite] -->
