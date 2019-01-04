@@ -35,7 +35,7 @@ public class BrowserFactory {
 			// options.addArguments("--start-maximized");
 			driver = new ChromeDriver(options);
 		} else if (browser.equals("Firefox")) {
-			//System.setProperty("webdriver.gecko.driver", Constant.Geckodriver);
+			System.setProperty("webdriver.gecko.driver", Constant.Geckodriver);
 			driver = new FirefoxDriver();
 			System.out.println("test2");
 

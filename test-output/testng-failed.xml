@@ -10,23 +10,9 @@
           <include name="getBrowser"/>
           <include name="tearDown"/>
           <include name="afterSuite"/>
-          <include name="formerrorvalidation"/>
+          <include name="formerrorvalidation" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation -->
     </classes>
   </test> <!-- ErrorMessageValidation(failed) -->
-  <test name="LinksValidation(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="com.mst.smokesuite.automationtraining.executionpage.Linkexecution">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="getBrowser"/>
-          <include name="tearDown"/>
-          <include name="afterSuite"/>
-          <include name="formlinkvalidation" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.mst.smokesuite.automationtraining.executionpage.Linkexecution -->
-    </classes>
-  </test> <!-- LinksValidation(failed) -->
 </suite> <!-- Failed suite [Suite] -->

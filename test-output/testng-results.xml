@@ -1,17 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="139" started-at="2019-01-04T11:28:18Z" finished-at="2019-01-04T11:28:18Z">
+  <suite name="Suite" duration-ms="38834" started-at="2019-01-04T12:00:17Z" finished-at="2019-01-04T12:00:55Z">
     <groups>
     </groups>
-    <test name="Test Batch" duration-ms="139" started-at="2019-01-04T11:28:18Z" finished-at="2019-01-04T11:28:18Z">
-      <class name="test.Tester">
-        <test-method status="PASS" signature="mains()[pri:0, instance:test.Tester@6a4f787b]" name="mains" duration-ms="56" started-at="2019-01-04T16:58:18Z" finished-at="2019-01-04T16:58:18Z">
+    <test name="ErrorMessageValidation" duration-ms="38834" started-at="2019-01-04T12:00:17Z" finished-at="2019-01-04T12:00:55Z">
+      <class name="com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation@25bbe1b6]" name="beforeSuite" is-config="true" duration-ms="141" started-at="2019-01-04T17:30:16Z" finished-at="2019-01-04T17:30:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mains -->
-      </class> <!-- test.Tester -->
-    </test> <!-- Test Batch -->
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation@25bbe1b6]" name="getBrowser" is-config="true" duration-ms="18043" started-at="2019-01-04T17:30:17Z" finished-at="2019-01-04T17:30:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBrowser -->
+        <test-method status="FAIL" signature="formerrorvalidation(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation@25bbe1b6]" name="formerrorvalidation" duration-ms="15288" started-at="2019-01-04T17:30:35Z" finished-at="2019-01-04T17:30:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation.formerrorvalidation(java.lang.String,java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.mst.automationtraining.customexception.Customexception">
+            <message>
+              <![CDATA[Mousehover not performed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.mst.automationtraining.customexception.Customexception: Mousehover not performed
+	at com.mst.automationtraining.utility.Utility.highlightFailedElement(Utility.java:56)
+	at com.mst.automationtraining.pageobject.Form101validation.errorvalidation(Form101validation.java:43)
+	at com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation.formerrorvalidation(TestExecutionValidation.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.mst.automationtraining.customexception.Customexception -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formerrorvalidation -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, java.lang.String)[pri:0, instance:com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation@25bbe1b6]" name="tearDown" is-config="true" duration-ms="5435" started-at="2019-01-04T17:30:50Z" finished-at="2019-01-04T17:30:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=formerrorvalidation status=FAILURE method=TestExecutionValidation.formerrorvalidation(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation@25bbe1b6] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation@25bbe1b6]" name="afterSuite" is-config="true" duration-ms="1290" started-at="2019-01-04T17:30:56Z" finished-at="2019-01-04T17:30:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation -->
+    </test> <!-- ErrorMessageValidation -->
   </suite> <!-- Suite -->
 </testng-results>
