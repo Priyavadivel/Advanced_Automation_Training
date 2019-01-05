@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="ErrorMessageValidation(failed)">
-    <parameter name="browser" value="Firefox"/>
+  <test name="SFValidation(failed)">
+    <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation">
+      <class name="com.mst.regressionsuite.automationtraining.execution.Form101regression">
         <methods>
           <include name="beforeSuite"/>
+          <include name="form101Submission" invocation-numbers="0"/>
           <include name="getBrowser"/>
           <include name="tearDown"/>
           <include name="afterSuite"/>
-          <include name="formerrorvalidation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.mst.smokesuite.automationtraining.executionpage.TestExecutionValidation -->
+      </class> <!-- com.mst.regressionsuite.automationtraining.execution.Form101regression -->
     </classes>
-  </test> <!-- ErrorMessageValidation(failed) -->
+  </test> <!-- SFValidation(failed) -->
 </suite> <!-- Failed suite [Suite] -->
