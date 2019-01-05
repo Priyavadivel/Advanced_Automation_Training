@@ -11,9 +11,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import com.mst.automationtraining.abstractclass.driverclass;
 import com.mst.automationtraining.constant.Constant;
 import com.mst.automationtraining.customexception.Customexception;
-import com.mst.automationtraining.driver.driverclass;
 import com.mst.automationtraining.extentreport.ReportGenerator;
 import com.mst.automationtraining.utility.Utility;
 
@@ -36,15 +36,14 @@ public class Form101validation extends driverclass {
 
 				data = e.getText();
 
-				if (data.equals("Error: You must enter a valu")) {
+				if (data.equals("Error: You must enter a value")) {
 					Utility.highlight(e, driver);
 				}
-				else {
-					Utility.highlightFailedElement(e, driver);
-				}
+				i = count + 1;
 			}
-			i = count + 1;
+			
 		}
+		
 	}
 
 	public static void scroll(WebElement element, WebDriver driver) {

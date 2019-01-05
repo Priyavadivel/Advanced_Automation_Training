@@ -21,6 +21,6 @@ public class Constant {
 	public static final String MAILSMTP = "smtp.gmail.com";
 	public static final String SFURL = "https://azica--qadevpro2.lightning.force.com";
 	public static final String USERNAME = "divya.k@mstsolutions.com";
-	public static final String PASSWORD = "1234welcome";
+	public static final String PASSWORD = "divya12345";
 
 }

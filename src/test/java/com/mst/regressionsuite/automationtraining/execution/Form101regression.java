@@ -27,11 +27,11 @@ public class Form101regression extends BaseTest {
 		String className = this.getClass().getSimpleName();
 		reporter = new ReportGenerator(browser,className);
 		reporter.parentReport(browser, methodName);		
-		driver.get(Constant.Form_URL);
+		//driver.get(Constant.Form_URL);
 		
 		Form101regressionsf webform101  = PageFactory.initElements(driver,Form101regressionsf.class);
 		
-		reporter.childReport("Last Name Entered");
+		/*reporter.childReport("Last Name Entered");
 		webform101.lastName.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"LastName"));
 		logger.info("Last Name Entered Successfully");
 		reporter.childReport("First Name Entered");
@@ -125,7 +125,7 @@ public class Form101regression extends BaseTest {
 		webform101.Agree.click();
 		webform101.Submit.click();
 		
-		webform101.Verify();
+		webform101.Verify();*/
 		
 		driver.get(Constant.SFURL);	
 	
@@ -135,8 +135,18 @@ public class Form101regression extends BaseTest {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
 		webform101.Headerbutton.click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
+		Thread.sleep(2000);
+		webform101.Search.sendKeys("101");;
 		
-		
+		/*driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
+		webform101.FormLink.click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		webform101.Listview.click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		webform101.dropdown.click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		webform101.table.click();*/
+				
 		
 		
 	}

@@ -12,9 +12,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
+import com.mst.automationtraining.abstractclass.driverclass;
 import com.mst.automationtraining.browser.BrowserFactory;
 import com.mst.automationtraining.customexception.Customexception;
-import com.mst.automationtraining.driver.driverclass;
 import com.mst.automationtraining.extentreport.ReportGenerator;
 import com.mst.automationtraining.mail.Mail_report;
 import com.mst.automationtraining.utility.Utility;

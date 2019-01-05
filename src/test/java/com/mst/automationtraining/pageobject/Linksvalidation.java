@@ -13,8 +13,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
+import com.mst.automationtraining.abstractclass.driverclass;
 import com.mst.automationtraining.customexception.Customexception;
-import com.mst.automationtraining.driver.driverclass;
 import com.mst.automationtraining.utility.Utility;
 
 public class Linksvalidation extends driverclass{
@@ -56,9 +57,6 @@ public class Linksvalidation extends driverclass{
 							if(Expected.equals(Actual)) {
 								Utility.highlight(ele, driver);
 								TimeUnit.MILLISECONDS.sleep(100);
-							}
-							else {
-								Utility.highlightFailedElement(ele, driver);
 							}
 						}
 					}

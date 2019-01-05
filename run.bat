@@ -1,1 +1,2 @@
-java -cp C:\Users\HemaR\Desktop\Assessment\AdvancedAutomation\bin;C:\Users\HemaR\Desktop\Assessment\AdvancedAutomation\lib\* org.testng.TestNG C:\Users\HemaR\Desktop\Assessment\AdvancedAutomation\testng.xml
+mvn clean test -DsuiteXmlFile=C:\Users\HemaR\Desktop\Assessment\AdvancedAutomation\testng
+ 
