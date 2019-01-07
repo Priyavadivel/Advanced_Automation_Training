@@ -11,13 +11,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import com.mst.automationtraining.abstractclass.driverclass;
+import com.mst.automationtraining.abstractclass.DriverClass;
 import com.mst.automationtraining.constant.Constant;
-import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.customexception.CustomException;
 import com.mst.automationtraining.extentreport.ReportGenerator;
 import com.mst.automationtraining.utility.Utility;
-
-public class Form101validation extends driverclass {
+/**
+ * 
+ * @author Priya V 
+ * Created Date: Dec 5,2018 
+ * Last modified By: Priya V 
+ * Purpose of the class: This class used to validate the error messages in Form101
+ */
+public class Form101Validation extends DriverClass {
 
 	// Submit Button
 	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9']/div[1]/div[15]/input")
@@ -52,11 +58,11 @@ public class Form101validation extends driverclass {
 			actions.moveToElement(element);
 			actions.perform();
 		} catch (Exception e) {
-			throw new Customexception("Mousehover not performed");
+			throw new CustomException("Mousehover not performed");
 		}
 	}
 
-	public Form101validation(WebDriver driver) {
+	public Form101Validation(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}

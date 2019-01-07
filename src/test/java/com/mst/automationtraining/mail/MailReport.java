@@ -20,9 +20,15 @@ import com.mst.automationtraining.constant.Constant;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
+/**
+ * 
+ * @author Priya V 
+ * Created Date: Dec 5,2018 
+ * Last modified By: Priya V 
+ * Purpose of the class: MailReport class is used to send the report to user thorigh email 
+ */
 
-
-public class Mail_report{
+public class MailReport{
 	
 	
    

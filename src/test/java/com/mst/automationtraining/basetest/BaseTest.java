@@ -12,11 +12,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
-import com.mst.automationtraining.abstractclass.driverclass;
+import com.mst.automationtraining.abstractclass.DriverClass;
 import com.mst.automationtraining.browser.BrowserFactory;
-import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.customexception.CustomException;
 import com.mst.automationtraining.extentreport.ReportGenerator;
-import com.mst.automationtraining.mail.Mail_report;
+import com.mst.automationtraining.mail.MailReport;
 import com.mst.automationtraining.utility.Utility;
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -68,7 +68,7 @@ public class BaseTest {
 				driver.manage().deleteAllCookies();
 				logger.info("Cookies are deleted");
 				driver.quit();
-			} catch (Customexception e) {
+			} catch (CustomException e) {
 				e.getLocalizedMessage();
 				e.getMessage();
 				logger.error("Custom Exception for tear down", e);

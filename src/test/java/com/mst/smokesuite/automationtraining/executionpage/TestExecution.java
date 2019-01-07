@@ -12,6 +12,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -22,18 +24,24 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.mst.automationtraining.basetest.BaseTest;
 import com.mst.automationtraining.constant.Constant;
-import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.customexception.CustomException;
 import com.mst.automationtraining.excelutility.ExcelUtility;
 import com.mst.automationtraining.extentreport.ExtentReportFactory;
 import com.mst.automationtraining.extentreport.ReportGenerator;
-import com.mst.automationtraining.mail.Mail_report;
+import com.mst.automationtraining.mail.MailReport;
 import com.mst.automationtraining.pageobject.Form101;
 import com.mst.automationtraining.utility.Utility;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
+/**
+ * 
+ * @author Priya V 
+ * Created Date: Dec,2018 
+ * Last modified By: Priya V 
+ * Purpose of the class: This class used to execute the smoke test case for Form101
+ */
 public class TestExecution extends BaseTest {
 
 	@Test
@@ -131,7 +139,7 @@ public class TestExecution extends BaseTest {
 		reporter.childReport("Date of Last Hire");
 		webform101.DOLastHire.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"DOLastHire"));
 		reporter.childReport("Was Worker?");
-		webform101.Wasworkedemp.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"Wasworkedemp"));
+				
 		
 		reporter.childReport("Actual Gross Earnings");
 		webform101.GrossEarnings.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"GrossEarnings"));

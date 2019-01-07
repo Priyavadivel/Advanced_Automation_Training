@@ -11,7 +11,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 import com.gargoylesoftware.htmlunit.javascript.host.file.File;
 import com.mst.automationtraining.constant.Constant;
-import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.customexception.CustomException;
 
 /**
  * 
@@ -46,7 +46,7 @@ public class BrowserFactory {
 			System.out.println("Headless Browser Invoked");
 
 		} else {
-			throw new Customexception("Browser is not correct");
+			throw new CustomException("Browser is not correct");
 		}
 		return driver;
 	}

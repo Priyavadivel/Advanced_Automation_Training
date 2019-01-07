@@ -7,12 +7,12 @@ package com.mst.automationtraining.customexception;
  *
  */
 
-public class Customexception extends RuntimeException {
+public class CustomException extends RuntimeException {
 
-	public Customexception() {
+	public CustomException() {
 	}
 
-	public Customexception(String message) {
+	public CustomException(String message) {
 		super(message);
 
 	}

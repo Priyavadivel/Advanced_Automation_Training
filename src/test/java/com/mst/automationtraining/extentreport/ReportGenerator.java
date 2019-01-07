@@ -17,7 +17,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import com.mst.automationtraining.constant.Constant;
-import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.customexception.CustomException;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -69,11 +69,11 @@ public class ReportGenerator {
 			String img = logger.addScreenCapture(fileName);
 			logger.log(LogStatus.FAIL, "Image", res + img);
 
-		} catch (Customexception ce) {
+		} catch (CustomException ce) {
 			ce.printStackTrace();
-			throw new Customexception("Custom Exception while taking Screenshot: " + ce);
+			throw new CustomException("Custom Exception while taking Screenshot: " + ce);
 		} catch (Exception ex) {
-			throw new Customexception("Exception while taking screen  shot: " + ex);
+			throw new CustomException("Exception while taking screen  shot: " + ex);
 		}
 	}
 

@@ -16,11 +16,13 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
 
-import com.mst.automationtraining.abstractclass.driverclass;
+import com.mst.automationtraining.abstractclass.DriverClass;
 import com.mst.automationtraining.constant.Constant;
-import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.customexception.CustomException;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -29,7 +31,7 @@ import com.relevantcodes.extentreports.LogStatus;
  * This class contains the utility methods like screenshot.
  *
  */
-public class Utility extends driverclass{
+public class Utility extends DriverClass{
 
 	public Utility(WebDriver driver) {
 		super(driver);
@@ -43,7 +45,7 @@ public class Utility extends driverclass{
 			js.executeScript("arguments[0].setAttribute('style','background: LightGreen;');",element);
 			TimeUnit.MILLISECONDS.sleep(100);
 		} catch (Exception e1) {
-			throw new Customexception(e1.getMessage());
+			throw new CustomException(e1.getMessage());
 		}
 	}
 	public static void highlightFailedElement(WebElement element, WebDriver driver) {
@@ -53,7 +55,7 @@ public class Utility extends driverclass{
 			js.executeScript("arguments[0].setAttribute('style','background: Red;');",element);
 			TimeUnit.MILLISECONDS.sleep(100);
 		} catch (Exception e1) {
-			throw new Customexception(e1.getMessage());
+			throw new CustomException(e1.getMessage());
 		}
 	}
 
@@ -63,15 +65,14 @@ public class Utility extends driverclass{
 			actions.moveToElement(element);
 			actions.perform();
 		} catch (Exception e) {
-			throw new Customexception("Mousehover not performed");
+			throw new CustomException("Mousehover not performed");
 		}
 	}
 
 	public interface IRetryAnalyzer {
 		public boolean retry(ITestResult result);
 	}
-
-
+	
 }
 
 

@@ -13,9 +13,15 @@ import com.mst.automationtraining.constant.Constant;
 import com.mst.automationtraining.excelutility.ExcelUtility;
 import com.mst.automationtraining.extentreport.ReportGenerator;
 import com.mst.automationtraining.pageobject.Form101;
-import com.mst.automationtraining.pageobject.Form101regressionsf;
-
-public class Form101regression extends BaseTest {	
+import com.mst.automationtraining.pageobject.Form101Regressionsf;
+/**
+ * 
+ * @author Priya V 
+ * Created Date: Dec,2018 
+ * Last modified By: Priya V 
+ * Purpose of the class: This class used to execute the regression test case for Form101
+ */
+public class Form101Regression extends BaseTest {	
 	@Test
 	@Parameters({"browser"})	
 	
@@ -27,11 +33,11 @@ public class Form101regression extends BaseTest {
 		String className = this.getClass().getSimpleName();
 		reporter = new ReportGenerator(browser,className);
 		reporter.parentReport(browser, methodName);		
-		//driver.get(Constant.Form_URL);
+		driver.get(Constant.Form_URL);
 		
-		Form101regressionsf webform101  = PageFactory.initElements(driver,Form101regressionsf.class);
+		Form101Regressionsf webform101  = PageFactory.initElements(driver,Form101Regressionsf.class);
 		
-		/*reporter.childReport("Last Name Entered");
+		reporter.childReport("Last Name Entered");
 		webform101.lastName.sendKeys(ExcelUtility.readExcel(methodName,TC_Name,"LastName"));
 		logger.info("Last Name Entered Successfully");
 		reporter.childReport("First Name Entered");
@@ -125,10 +131,9 @@ public class Form101regression extends BaseTest {
 		webform101.Agree.click();
 		webform101.Submit.click();
 		
-		webform101.Verify();*/
+		webform101.Verify();
 		
-		driver.get(Constant.SFURL);	
-	
+		/*driver.get(Constant.SFURL);	
 		webform101.Username.sendKeys(Constant.USERNAME);
 		webform101.Password.sendKeys(Constant.PASSWORD);
 		webform101.Login.click();
@@ -137,8 +142,7 @@ public class Form101regression extends BaseTest {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 		Thread.sleep(2000);
 		webform101.Search.sendKeys("101");;
-		
-		/*driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 		webform101.FormLink.click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		webform101.Listview.click();
@@ -146,12 +150,8 @@ public class Form101regression extends BaseTest {
 		webform101.dropdown.click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		webform101.table.click();*/
-				
-		
 		
 	}
-	
-		 
 }	 
 
 			

@@ -11,11 +11,17 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 
-import com.mst.automationtraining.abstractclass.driverclass;
-import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.abstractclass.DriverClass;
+import com.mst.automationtraining.customexception.CustomException;
 import com.mst.automationtraining.excelutility.ExcelUtility;
-
-public class Form101 extends driverclass {
+/**
+ * 
+ * @author Priya V 
+ * Created Date: Dec 5,2018 
+ * Last modified By: Priya V 
+ * Purpose of the class: Form101 contains the xpath of all the fields present in webform101
+ */
+public class Form101 extends DriverClass {
 
 	// Employee Section
 
@@ -312,7 +318,7 @@ public class Form101 extends driverclass {
 				System.out.println("Expected Value:" + expected);
 
 			} else {
-				throw new Customexception("The value " + actual + "is not matched with the given value " + expected);
+				throw new CustomException("The value " + actual + "is not matched with the given value " + expected);
 
 			}
 

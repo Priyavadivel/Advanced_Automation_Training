@@ -13,8 +13,14 @@ import com.mst.automationtraining.constant.Constant;
 
 import com.mst.automationtraining.extentreport.ReportGenerator;
 
-import com.mst.automationtraining.pageobject.Form101validation;
-
+import com.mst.automationtraining.pageobject.Form101Validation;
+/**
+ * 
+ * @author Priya V 
+ * Created Date: Dec,2018 
+ * Last modified By: Priya V 
+ * Purpose of the class: This class used to execute the smoke test case for Form101
+ */
 public class TestExecutionValidation extends BaseTest{
 	@Test
 	@Parameters({"browser"})	
@@ -29,7 +35,7 @@ public class TestExecutionValidation extends BaseTest{
 		reporter.childReport("Form 101 link passed in browser");
 		driver.get(Constant.Form_URL);
 		reporter.childReport("Clicked Submit button");
-		Form101validation FormValidation = PageFactory.initElements(driver,Form101validation.class);
+		Form101Validation FormValidation = PageFactory.initElements(driver,Form101Validation.class);
 		FormValidation.Submit.click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 		logger.info("Submit button clicked");

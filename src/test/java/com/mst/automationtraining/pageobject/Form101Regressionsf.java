@@ -12,19 +12,20 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import com.mst.automationtraining.abstractclass.driverclass;
+import com.mst.automationtraining.abstractclass.DriverClass;
 import com.mst.automationtraining.constant.Constant;
-import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.customexception.CustomException;
 
-public class Form101regressionsf extends driverclass{
+/**
+ * 
+ * @author Priya V 
+ * Created Date: Dec 5,2018 
+ * Last modified By: Priya V 
+ * Purpose of the class: Form101Regressionsf class contains the xpath of Salesforce along with xpath of form101
+ */
+
+public class Form101Regressionsf extends DriverClass{
 	// Employee Section	
-
-
-
-	public Form101regressionsf(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
 
 	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11:j_id12:last']")
 	public WebElement lastName;
@@ -323,7 +324,7 @@ public class Form101regressionsf extends driverclass{
 
 			}
 			else{
-				throw new Customexception("The value "+actual+"is not matched with the given value "+expected);
+				throw new CustomException("The value "+actual+"is not matched with the given value "+expected);
 
 
 			}
@@ -346,31 +347,26 @@ public class Form101regressionsf extends driverclass{
 
 	@FindBy(how = How.XPATH, using = "//button[@class='slds-button']")
 	public WebElement Headerbutton;
-	
+
 	@FindBy(how = How.XPATH, using = "//input[@id='18:2588;a']")
 	public WebElement Search;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@class='slds-section slds-is-open oneAppLauncherItemList']/div[2]/ul/li/a[@title='101']")
 	public WebElement FormLink;
-	
+
 	@FindBy(how = How.XPATH, using = "/html/body/div[5]/div[1]/section/div[2]/div/div[1]/div[2]/div/div/div[1]/div[1]/div[1]/div/div[2]/h1/div/div/a")
 	public WebElement Listview;
-	
+
 	@FindBy(how = How.XPATH, using = "/html/body/div[5]/div[2]/div[6]/div/div[1]/div/div/div/div/div[1]/div/ul/li[3]/a/span")
 	public WebElement dropdown;
-	
+
 	@FindBy(how = How.XPATH, using = ".//table/tbody/tr[1]/th/span/a")
 	public WebElement table;
-	
-	
-	
-	
-	
 
 
-
-
-
-
+	public Form101Regressionsf(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
 
 }

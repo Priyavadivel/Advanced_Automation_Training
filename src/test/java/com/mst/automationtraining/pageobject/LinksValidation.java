@@ -14,12 +14,18 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import com.mst.automationtraining.abstractclass.driverclass;
-import com.mst.automationtraining.customexception.Customexception;
+import com.mst.automationtraining.abstractclass.DriverClass;
+import com.mst.automationtraining.customexception.CustomException;
 import com.mst.automationtraining.utility.Utility;
-
-public class Linksvalidation extends driverclass{
-	public Linksvalidation(WebDriver driver) {
+/**
+ * 
+ * @author Priya V 
+ * Created Date: Dec 5,2018 
+ * Last modified By: Priya V 
+ * Purpose of the class: This class used to validate the Links present in Form101
+ */
+public class LinksValidation extends DriverClass{
+	public LinksValidation(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}

@@ -10,9 +10,15 @@ import org.testng.annotations.Test;
 import com.mst.automationtraining.basetest.BaseTest;
 import com.mst.automationtraining.constant.Constant;
 import com.mst.automationtraining.extentreport.ReportGenerator;
-import com.mst.automationtraining.pageobject.Linksvalidation;
-
-public class Linkexecution extends BaseTest{
+import com.mst.automationtraining.pageobject.LinksValidation;
+/**
+ * 
+ * @author Priya V 
+ * Created Date: Dec,2018 
+ * Last modified By: Priya V 
+ * Purpose of the class: This class used to execute the smoke test case for Form101
+ */
+public class LinkExecution extends BaseTest{
 	
 		@Test
 		@Parameters({"browser"})	
@@ -25,7 +31,7 @@ public class Linkexecution extends BaseTest{
 			reporter.childReport("Form 101 link passed in browser");
 			driver.get(Constant.Form_URL);
 			reporter.childReport("Part of Body Injured Link Clicked");
-			Linksvalidation FormLinks = PageFactory.initElements(driver,Linksvalidation.class);
+			LinksValidation FormLinks = PageFactory.initElements(driver,LinksValidation.class);
 			FormLinks.PartofBodyLink.click();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 			logger.info("Link clicked");
